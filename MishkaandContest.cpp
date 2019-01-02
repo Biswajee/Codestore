@@ -25,7 +25,7 @@ int main() {
     }
 
     reverse(A.begin(), A.end());
-    
+    cout << A.size() << endl;
     for(int i=0; i < A.size(); i++) {
         if(A[0] > k) {
             break;
@@ -34,10 +34,10 @@ int main() {
             A.erase(A.begin()); // remove first item
     }
 
-    cout << n - A.size() << endl;
+    cout << A.size() << endl;
     // Modified Array
-    // for(auto i = A.begin(); i != A.end(); ++i) {
-    //     cout << *i << " ";
-    // }
+    for(auto i = A.begin(); i != A.end(); ++i) {
+        cout << *i << " ";
+    }
     return 0;
 }
