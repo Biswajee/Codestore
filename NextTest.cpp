@@ -11,7 +11,6 @@ int main() {
 
     int n,x;
     vector<int> A;
-    vector<int>::iterator it;
 
     cin >> n;
     for(int i=0; i < n; i++) {
@@ -31,7 +30,7 @@ int main() {
             j++;
         }
         else {
-            cout << i << " ";
+            cout << i;
             break;
         }
     }
