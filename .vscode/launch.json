@@ -9,7 +9,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/MishkaandContest.exe",
+            "program": "F:\\DefiniteGame.exe",//"${workspaceFolder}/MishkaandContest.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
