@@ -48,6 +48,9 @@ int main() {
                     if(bdiv > adiv) {
                         cout << "ALICE\n"; 
                     }
+                    if(adiv==bdiv) {
+                        cout << "ALICE\n";
+                    }
                 }
             }
         }
