@@ -7,10 +7,11 @@ using namespace std;
 int main() {
     blackpink
 
-    long long int t,n,a,b,x,adiv=0,bdiv=0,abdiv=0;
+    long long int t=1,n,a,b,x,adiv=0,bdiv=0,abdiv=0;
     
     cin >> t;
     while (t--) {
+        adiv=0,bdiv=0,abdiv=0;
         cin >> n >> a >> b;
 
         for(long long int i=0; i<n; i++) {
@@ -25,36 +26,11 @@ int main() {
                 abdiv++;
             }
         }
-        // cout << adiv << " " << bdiv << " " << abdiv << endl;
-        if(a == b) {
-            cout << "BOB\n";
-        }
-        else {
-            if((adiv-abdiv)==0 && (bdiv-abdiv)==0) {
-                cout << "BOB\n";
-            } 
-            else {
-                if((adiv-abdiv)==0 || (bdiv-abdiv)==0) {
-                    if((adiv-abdiv)==0) {
-                        cout << "ALICE\n";
-                    }
-                    if((bdiv-abdiv)==0) {
-                        cout << "BOB\n";
-                    }
-                } else {
-                    if(adiv > bdiv) {
-                        cout << "BOB\n";
-                    }
-                    if(bdiv > adiv) {
-                        cout << "ALICE\n"; 
-                    }
-                    if(adiv==bdiv) {
-                        cout << "ALICE\n";
-                    }
-                }
-            }
-        }
-        adiv=0,bdiv=0,abdiv=0;
+        adiv-=abdiv;
+        bdiv-=abdiv;
+        if(abdiv>0)adiv++;
+        if(adiv <= bdiv) cout<<"ALICE\n";
+        else cout<<"BOB"<<endl;
     }
     return 0;
  }
