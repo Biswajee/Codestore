@@ -7,51 +7,51 @@ using namespace std;
 int main() {
     blackpink
 
-    int t,n,a,b,x,chance,a_lost,b_lost;
-    vector<int> A;
+    long long int t,n,a,b,x,adiv=0,bdiv=0,abdiv=0;
+    
     cin >> t;
     while (t--) {
-        a_lost = 0;
-        b_lost = 0;
         cin >> n >> a >> b;
 
-        for(int i=0; i<n; i++) {
+        for(long long int i=0; i<n; i++) {
             cin >> x;
-            A.push_back(x);
+            if(x%a==0) {
+                adiv++;
+            }
+            if(x%b==0) {
+                bdiv++;
+            }
+            if(x%a==0 && x%b==0) {
+                abdiv++;
+            }
         }
-
+        // cout << adiv << " " << bdiv << " " << abdiv << endl;
         if(a == b) {
             cout << "BOB\n";
         }
         else {
-            for(int chance = 1; a_lost != 1 && b_lost != 1; chance++) {
-                if(chance%2 != 0) {
-                    // BOB's turn
-                    for(auto i = A.begin(); i != A.end(); ++i) {
-                        if(*i%a==0 && *i%b==0) {
-                            A.erase(i);
-                        }
+            if((adiv-abdiv)==0 && (bdiv-abdiv)==0) {
+                cout << "BOB\n";
+            } 
+            else {
+                if((adiv-abdiv)==0 || (bdiv-abdiv)==0) {
+                    if((adiv-abdiv)==0) {
+                        cout << "ALICE\n";
+                    }
+                    if((bdiv-abdiv)==0) {
+                        cout << "BOB\n";
                     }
                 } else {
-                    // ALICE's turn
-                    for(auto i = A.begin(); i != A.end(); ++i) {
-                        if(*i%a==0 && *i%b==0) {
-                            A.erase(i);
-                        }
+                    if(adiv > bdiv) {
+                        cout << "BOB\n";
+                    }
+                    if(bdiv > adiv) {
+                        cout << "ALICE\n"; 
                     }
                 }
             }
         }
-
-        for(auto i: A) {
-            cout << i << " ";
-        }
-        if(a_lost == 1) {
-            cout << "ALICE\n";
-        }
-        if(b_lost == 1) {
-            cout << "BOB\n";
-        }
+        adiv=0,bdiv=0,abdiv=0;
     }
     return 0;
  }
