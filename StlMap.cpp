@@ -15,6 +15,9 @@ int main() {
     A[2] = -1;
     A[3] = 200;
     A[10000223] = 1;
+    A[3] = 2;
+
+    // A[3] will be assigned with 2 as value...no error
 
     map<char, int> cnt;
     
@@ -37,7 +40,7 @@ int main() {
 
     // show content:
     for (it=A.begin(); it!=A.end(); ++it)
-        cout << it->first << " => " << it->second << '\n';
+        cout << it->first << " => " << it->second << "\n";
 
     cout << endl;
 
