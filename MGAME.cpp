@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 // #include <tuple>
 // #include <vector>
 using namespace std;
@@ -15,8 +15,8 @@ int main() {
         res=0;
         count=0;
         for(int i=1; i <= p; i++) {
-            for(int j=1; j <=p; j++) {
-                for(int k=1; k<=p; k++) {
+            for(int j=1; j <= p; j++) {
+                for(int k=1; k <= p; k++) {
                     score = (((n%i)%j)%k)%n;
                     if(res < score) {
                         res = score;
