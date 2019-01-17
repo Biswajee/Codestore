@@ -9,14 +9,19 @@ public class Candies {
 
         int n = Integer.parseInt(br.readLine());
         ArrayList<Integer> arrli = new ArrayList<Integer>(n);
-        for(int i=0; i < n; i++)
-            arrli.add(Integer.parseInt(br.readLine()));
+        for(int i=0; i < n; i++) {
+            String inp = br.readLine();
+            if(!inp.equals(""))
+                arrli.add(Integer.parseInt(inp));
+            else
+                break;
+        }
 
-        int res = candy(arrli);
+        long res = candy(arrli);
         System.out.println(res);
     }
 
-    public static int candy(ArrayList<Integer> a) {
+    public static long candy(ArrayList<Integer> a) {
         int size = a.size();
         int[] cand = new int[size];
 
