@@ -17,8 +17,37 @@ Return array A representing the candies all children get where A[i] is the numbe
 
 #include <iostream>
 #include <algorithm>
-#define blackpink ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-
+#define BLACKPINK ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+using namespace std;
 int main() {
+    BLACKPINK
+
+    int n,k;
+    cin >> n >> k;
+    int candies[n];
+
+    for(int i=1,j=0; i <= k; i++) {
+        if(k-i > i) {
+            candies[j++] = i;
+            k = k-i;
+        }
+        else if(k-i < i) {
+            candies[j++] = k-i;
+            break;          // k=0
+        }
+        else {
+            candies[j++] = i;
+            break;          // k=0
+        }
+        if(j-1 > n-1) {
+            j=0;
+        }
+    }
+    
+    for(int i=0; i <= n; i++) {
+        cout << candies[i] << " ";
+    }
     return 0;
 }
+
+// ERRONEOUS :(
