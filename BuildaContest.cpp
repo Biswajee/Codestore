@@ -25,7 +25,7 @@ int main() {
         if(flag == 0) {
             cout << 1;
             for (int j = 1; j <= n; j++) {
-                count[j] = 0;  
+                count[j]--;  
             }
         }
         else {
