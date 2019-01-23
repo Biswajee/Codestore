@@ -26,33 +26,44 @@ Testcase 1: Smallest element on left of 3 is 2, 4 is 3 and 5 is 1. Since 2 is th
 */
 
 
-#include <iostream>
-#include <algorithm>
-#include <set>
-#define BLACKPINK ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-using namespace std;
-
-int main() {
-    BLACKPINK
-	int t,n,x;
-    set<int> s;
-	// cin >> t;
-    t = 1;
-	
-	while(t--) {
-        cin >> n;
-        s.insert(-1);
-        for(int i=0; i<n; i++) {
-            cin >> x;
-            
-            auto it = s.lower_bound(x);
-            cout << *it << " ";
-            s.insert(x);      
+import java.io.*;
+import java.util.*;
+class SmallerOnLeft {
+	public static void main (String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		int n,t;
+		t=sc.nextInt();
+		for(int i=0;i<t;i++){
+		n=sc.nextInt();
+		int a[]=new int[n];
+		for(int j=0;j<n;j++)
+		{
+		    a[j]=sc.nextInt();
+		}
+		TreeSet<Integer> ts=new TreeSet<Integer>();
+		int res=-1;
+		for(int j=0;j<n;j++)
+		{res=-1;
+		    if(j==0)
+        {
+           // ts.add(a[0]);
+            res=-1;
         }
-        cout << endl;
-        for(int i: s) {
-            cout << i << " ";
+        else{
+            ts.add(a[j-1]);
+            if(ts.lower(a[j])==null)
+            {
+                res=-1;
+            }
+            else
+            {
+                res=ts.lower(a[j]);
+            }
         }
+        System.out.print(res+" ");
+		}
+		System.out.println(" ");
+		}
 	}
-	return 0;
 }
