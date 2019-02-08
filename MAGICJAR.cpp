@@ -7,11 +7,16 @@ int main() {
     BLACKPINK
     ll t,n,minimum=0;
     cin >> t;
-    while(t--) {
+    for(ll i=t-1; i>=0; i--) {
         cin >> n;
-        for(ll i=0; i<n; i++) {
-            
+        ll a[n];
+        for(ll j=0; j<n; j++) {
+            cin >> a[i];
         }
+         for(ll k=0; k<n; k++) {
+            minimum += (a[i] - 1);
+        }
+        cout << minimum + 1 << endl;
     }
     return 0;
 }
