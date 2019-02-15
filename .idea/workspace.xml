@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c29cd79b-2294-4923-a9f0-a4b635b188b2" name="Default" comment="more stuffs">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ARTBALAN.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OverlappingIntervals.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SuperPrimes.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MatrixLayerRotation.cpp" afterPath="$PROJECT_DIR$/MatrixLayerRotation.cpp" />
     </list>
@@ -159,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="697" />
@@ -409,7 +411,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
