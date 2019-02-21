@@ -1,6 +1,7 @@
 ArraySum.java
 *.exe
 compiled_src/
+Practice/
 tempCodeRunnerFile.cpp
 CoinChangingMinimumCoin.java
 GraphBraces.cpp
