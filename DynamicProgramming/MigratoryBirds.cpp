@@ -6,7 +6,7 @@ using namespace std;
 string ltrim(const string &);
 string rtrim(const string &);
 vector<string> split(const string &);
-
+// descending order sorting...
 bool cmp(const pair<int,int> &p1, const int v)
 {
     if(p1.first<v)
