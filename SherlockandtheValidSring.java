@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution {
+public class SherlockandtheValidSring {
 
     // Complete the isValid function below.
     static String isValid(String s) {
