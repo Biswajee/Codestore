@@ -48,6 +48,7 @@ class BST {
         }  
         return x;
     }
+
     public Node getSuccessor(Node node) {
         if(node == null)
             return null;
@@ -59,6 +60,17 @@ class BST {
         }
         return temp;
     }
+
+    int minValue(Node node) {
+        if(node == null)
+            return -1;
+        if(node.left == null)
+            return node.data;
+        while(node.left != null) {
+            node = node.left;
+        }
+        return node.data;
+    }
 }
 
 class BSTGod {
@@ -67,6 +79,13 @@ class BSTGod {
         Node node = new Node();
         // insert 8
         tree.insert(node, 8);
+
+        // delete 8 or any value
+        tree.delete(node, 8);
+
+        // min value from given node
+        tree.minValue(node);
         
+
     }
 }
