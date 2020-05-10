@@ -25,13 +25,17 @@ using namespace std;
 //     return 0;
 // }
 
-
+int alarm = 0;
 ll countMSB(ll q, vector<ll> v) { 
-    ll inc = 0; 
-    for (ll i = 0; i < v.size(); i++) 
-        if ((q & v[i]) == q) 
-            inc++; 
-    return inc; 
+    ll linc = 0;
+    ll rinc = 0; 
+    for (ll i = 0, j=v.size()-1; i < v.size() && j>=0 && i<=j; i++, j--) {
+        if ((q & v[i]) == q) linc++;
+        if ((q & v[j]) == q) rinc++; 
+    }
+    if(rinc > linc) return linc;
+    alarm = 1; 
+    return rinc; 
 } 
 
 ll maxAND (ll xy, vector<ll> v) { 
