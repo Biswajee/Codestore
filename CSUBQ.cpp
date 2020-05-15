@@ -1,3 +1,7 @@
+#pragma GCC optimize("Ofast")
+#pragma GCC target ("avx2")
+#pragma GCC optimization ("O3")
+#pragma GCC optimization ("unroll-loops")
 #include <bits/stdc++.h>
 #include <vector>
 #define ll long long
