@@ -4,7 +4,7 @@ using namespace std;
 //function Template for C++
 
 /* A binary tree node has data, pointer to left child
-   and a pointer to right child /
+   and a pointer to right child */
 struct Node
 {
     int data;
@@ -15,7 +15,7 @@ struct Node
         data = x;
         left = right = NULL;
     }
-}; */
+}; 
 
 /* Should convert tree to its mirror */
 void mirror(Node* node) 
