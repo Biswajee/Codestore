@@ -1,7 +1,6 @@
 //Initial Template for Java
 //Initial Template for Java
-        import java.util.*;
-        import java.io.*;
+import java.util.*;
 public class validip {
     public static void main(String[] args){
         Scanner sc= new Scanner (System.in);
