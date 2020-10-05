@@ -9,7 +9,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/ARTBALAN.exe",
+            "program": "${workspaceFolder}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -23,6 +23,9 @@
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
+            ],
+            "configurations": [
+            
             ]
         }
     ]
